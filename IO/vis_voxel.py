@@ -4,7 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  
 
-stl_mesh = trimesh.load('/home/tlmsq/boneking/dataset/1-025.stl')
+# file_path = '/home/tlmsq/boneking/dataset/1-025.stl'
+file_path = None
+stl_mesh = trimesh.load(file_path)
 bbox_min, bbox_max = stl_mesh.bounds
 extent = bbox_max - bbox_min  
 scale_factor = 3.0 / max(extent)  

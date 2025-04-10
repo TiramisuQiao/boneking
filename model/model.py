@@ -65,14 +65,14 @@ def dice_loss(pred, target, smooth=1.0):
     return dice_loss_val.mean()
 
 
-if __name__ == "__main__":
-    x = torch.randn(2, 1, 60, 60, 60)
-    target_indices = torch.randint(0, 8, (2, 60, 60, 60))
-    target = F.one_hot(target_indices, num_classes=8).permute(0, 4, 1, 2, 3).float()
-    model = AutoEncoder3D(in_channels=1, out_channels=8, base_channels=8)
-    x_hat = model(x)
-    print("x_hat shape: ", x_hat.shape)  #  (2, 8, 60, 60, 60)
-    loss = dice_loss(x_hat, target)
-    print("Dice Loss: ", loss.item())
-    mse_loss = F.mse_loss(x_hat, target)  
-    print("MSE Loss: ", mse_loss.item())
+# if __name__ == "__main__":
+#     x = torch.randn(2, 1, 60, 60, 60)
+#     target_indices = torch.randint(0, 8, (2, 60, 60, 60))
+#     target = F.one_hot(target_indices, num_classes=8).permute(0, 4, 1, 2, 3).float()
+#     model = AutoEncoder3D(in_channels=1, out_channels=8, base_channels=8)
+#     x_hat = model(x)
+#     print("x_hat shape: ", x_hat.shape)  #  (2, 8, 60, 60, 60)
+#     loss = dice_loss(x_hat, target)
+#     print("Dice Loss: ", loss.item())
+#     mse_loss = F.mse_loss(x_hat, target)  
+#     print("MSE Loss: ", mse_loss.item())

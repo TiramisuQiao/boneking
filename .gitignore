@@ -5,7 +5,8 @@ build/
 dist/
 wheels/
 *.egg-info
-dataset/
-dataset_voxel/
 # Virtual environments
 .venv
+# Dataset
+dataset_voxel/
+Dataset/

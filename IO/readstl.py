@@ -72,12 +72,12 @@ def process_stl_to_voxel(stl_path, output_dir, vox_dim=60):
     
     return voxel_matrix
 
-if __name__ == "__main__":
-    stl_file = '/home/tlmsq/boneking/dataset/1-025.stl'
-    output_directory = '/home/tlmsq/boneking/dataset_voxel/'
+# if __name__ == "__main__":
+#     stl_file = '/home/tlmsq/boneking/dataset/1-025.stl'
+#     output_directory = '/home/tlmsq/boneking/dataset_voxel/'
     
-    if not os.path.exists(output_directory):
-        os.makedirs(output_directory)
-    voxel_data = process_stl_to_voxel(stl_file, output_directory, vox_dim=60)
-    console.print(f"Voxel matrix shape: {voxel_data.shape}", style="bold cyan")
-    console.print(f"Total number of voxels containing the model (value 1) = {np.sum(voxel_data)}", style="bold cyan")
+#     if not os.path.exists(output_directory):
+#         os.makedirs(output_directory)
+#     voxel_data = process_stl_to_voxel(stl_file, output_directory, vox_dim=60)
+#     console.print(f"Voxel matrix shape: {voxel_data.shape}", style="bold cyan")
+#     console.print(f"Total number of voxels containing the model (value 1) = {np.sum(voxel_data)}", style="bold cyan")
